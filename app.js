@@ -11,7 +11,7 @@ var members = [];
 var ev = new EventEmitter;
 var fetchFunc = fetchMembers('/team?page=1');
 fetchFunc.on(EVENT_DONE, function(){
-    showRandomMember(members);
+    showRandomMember();
 });
 
 // メンバー取得(ページングは再起的に)
@@ -37,7 +37,7 @@ function fetchMembers(uri) {
 }
 
 // ランダム表示
-function showRandomMember(members) {
+function showRandomMember() {
     // TODO ランダムに選択して表示する処理をここに書く
     console.log(members);
 }
